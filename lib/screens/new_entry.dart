@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasteagram/widgets/cust_app_bar.dart';
 
 
 class NewEntry extends StatelessWidget {
@@ -8,6 +9,7 @@ class NewEntry extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustAppBar(title: 'Wasteagram'),
       body: Text('New Entry Screen')
     );
   }
