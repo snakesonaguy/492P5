@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:flutter/services.dart';
+import 'dart:io';
 
 class EntryDTO {
   String photoUrl;
@@ -9,6 +10,10 @@ class EntryDTO {
 }
 
 class NewEntryForm extends StatefulWidget {
+
+  final File image;
+
+  NewEntryForm({Key key, this.image}): super(key: key);
 
   @override
   _NewEntryFormState createState() => _NewEntryFormState();
@@ -60,7 +65,7 @@ class _NewEntryFormState extends State<NewEntryForm> {
     }
     else {
       return SingleChildScrollView(
-      child: Text('${locationData.latitude} ${locationData.longitude}')
+      child: Image.file(widget.image)
       );
     }
   }
