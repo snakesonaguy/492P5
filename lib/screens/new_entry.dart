@@ -6,14 +6,15 @@ import 'package:wasteagram/widgets/new_entry_form.dart';
 
 class NewEntry extends StatelessWidget {
 
-  static const routeName = 'new_entry';
+  File image;
+
+  NewEntry({this.image});
 
   @override 
   Widget build(BuildContext context) {
-    File receivedValue = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: CustAppBar(title: 'Wasteagram'),
-      body: NewEntryForm(image: receivedValue,),
+      body: NewEntryForm(image:image),
     );
   }
 }

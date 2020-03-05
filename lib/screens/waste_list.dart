@@ -5,8 +5,6 @@ import 'package:wasteagram/widgets/cust_app_bar.dart';
 
 class WasteList extends StatefulWidget {
 
-  static const routeName = '/';
-
   @override
   _WasteListState createState() => _WasteListState();
 }
@@ -29,5 +27,7 @@ class _WasteListState extends State<WasteList> {
 }
 
 void addEntry(BuildContext context) {
-  Navigator.of(context).pushNamed(ImageSelector.routeName);
+  Navigator.of(context).push(
+    MaterialPageRoute(builder: (context) => ImageSelector())
+  );
 }

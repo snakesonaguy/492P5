@@ -7,9 +7,6 @@ import 'package:wasteagram/widgets/cust_app_bar.dart';
 
 class ImageSelector extends StatelessWidget {
 
-  static const routeName = 'image_selector';
-
-
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,19 +39,31 @@ class _ImageScreenState extends State<ImageScreen> {
           color: Colors.blue,
           onPressed: () {
              getImage();
-             addEntry(context, image);
           },
           )
         );
     }
-    // else {
-    //   return Center(
-    //     child: Image.file(image)
-    //   );
-    // }
+    else {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image.file(image),
+            RaisedButton(
+              child: Text('Post It'),
+              onPressed: () {
+                addEntry(context, image);
+              },
+              )
+          ],
+        )
+      );
+    }
   }
 }
 
-void addEntry(BuildContext context, File args) {
-  Navigator.of(context).pushNamed(NewEntry.routeName, arguments: args);
+void addEntry(BuildContext context, File image) {
+  Navigator.of(context).push(
+    MaterialPageRoute(builder: (context) => NewEntry(image: image))
+  );
 }
