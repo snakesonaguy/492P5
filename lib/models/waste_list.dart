@@ -25,7 +25,8 @@ class WasteList {
   bool isEmpty() {
     if (wasteEntries.length <= 0) {
       return true;
-    } else {
+    } 
+    else {
       return false;
     }
   }
