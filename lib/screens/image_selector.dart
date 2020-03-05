@@ -47,11 +47,11 @@ class _ImageScreenState extends State<ImageScreen> {
           )
         );
     }
-    else {
-      return Center(
-        child: Image.file(image)
-      );
-    }
+    // else {
+    //   return Center(
+    //     child: Image.file(image)
+    //   );
+    // }
   }
 }
 

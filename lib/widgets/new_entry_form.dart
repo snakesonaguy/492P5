@@ -65,7 +65,7 @@ class _NewEntryFormState extends State<NewEntryForm> {
     }
     else {
       return SingleChildScrollView(
-      child: Image.file(widget.image)
+        child: Image.file(widget.image)
       );
     }
   }
