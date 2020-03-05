@@ -14,7 +14,7 @@ class NewEntry extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustAppBar(title: 'Wasteagram'),
-      body: NewEntryForm(image:image),
+      body: NewEntryForm(image: image),
     );
   }
 }
