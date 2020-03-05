@@ -60,7 +60,7 @@ class _NewEntryFormState extends State<NewEntryForm> {
 
   @override 
   Widget build(BuildContext context) {
-    if (locationData == null) {
+    if (locationData == null || widget.image == null) {
       return Center(child: CircularProgressIndicator());
     }
     else {

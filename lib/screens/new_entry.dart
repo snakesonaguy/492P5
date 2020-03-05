@@ -10,10 +10,10 @@ class NewEntry extends StatelessWidget {
 
   @override 
   Widget build(BuildContext context) {
-    final File receivedValue = ModalRoute.of(context).settings.arguments;
+    File receivedValue = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: CustAppBar(title: 'Wasteagram'),
-      body: NewEntryForm(receivedValue),
+      body: NewEntryForm(image: receivedValue,),
     );
   }
 }
