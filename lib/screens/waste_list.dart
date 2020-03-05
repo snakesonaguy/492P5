@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wasteagram/screens/new_entry.dart';
+import 'package:wasteagram/screens/image_selector.dart';
 import 'package:wasteagram/widgets/cust_app_bar.dart';
 
 
@@ -29,5 +29,5 @@ class _WasteListState extends State<WasteList> {
 }
 
 void addEntry(BuildContext context) {
-  Navigator.of(context).pushNamed(NewEntry.routeName);
+  Navigator.of(context).pushNamed(ImageSelector.routeName);
 }
