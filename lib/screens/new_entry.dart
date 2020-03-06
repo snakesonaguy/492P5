@@ -6,7 +6,7 @@ import 'package:wasteagram/widgets/new_entry_form.dart';
 
 class NewEntry extends StatelessWidget {
 
-  File image;
+  final File image;
 
   NewEntry({this.image});
 

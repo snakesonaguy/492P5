@@ -63,7 +63,7 @@ class _ImageScreenState extends State<ImageScreen> {
 }
 
 void addEntry(BuildContext context, File image) {
-  Navigator.of(context).push(
-    MaterialPageRoute(builder: (context) => NewEntry(image: image))
+  Navigator.pushReplacement(
+    context, MaterialPageRoute(builder: (BuildContext context) => NewEntry(image: image))
   );
 }
